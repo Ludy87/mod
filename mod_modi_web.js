@@ -94,6 +94,7 @@ if (mail == undefined && hostPathLength == 4 && area !== "leaderboard") {
 		}, 2000);
 	});
 	$( "body" ).delegate( "button.replyForm", "click", function() {
+		console.log($(this).text().trim() + " " + chrome.i18n.getMessage(tld + "_reply"))
 		if($(this).text().trim() == chrome.i18n.getMessage(tld + "_reply")) {
 			var commentId = $(this).data("reply");
 			console.log($(this).parent().parent().parent().find("header a").first().text());
