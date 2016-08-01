@@ -224,7 +224,7 @@ function Android () {
 	});
 	$( "body" ).delegate( "ul.threadPostOptionsButtons a", "click", function() {
 		var mThis = this;
-		if($(this).text().trim() == "Antworten") {
+		if($(this).text().trim() == chrome.i18n.getMessage(tld + "_reply")) {
 			$().ready(function() {
 				setTimeout(writeSite, 1500);
 			});
