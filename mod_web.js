@@ -26,7 +26,7 @@ function Android () {
     	ajax = new XMLHttpRequest();
 	 
 	if(ajax!=null){
-		ajax.open("GET","https://raw.githubusercontent.com/Ludy87/js/master/forum.js?v=" + v,true);
+		ajax.open("GET","https://raw.githubusercontent.com/Ludy87/mod/master/forum.js?v=" + v,true);
 		ajax.setRequestHeader('X-Content-Type-Options','nosniff');
 		ajax.onreadystatechange = function(){
 			if(this.readyState == 4){
