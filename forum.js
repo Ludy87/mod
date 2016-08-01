@@ -42,6 +42,7 @@
 		    	});
 			$(this).delegate( "ul.threadPostOptionsButtons a", "click", function() {
 				console.log($(_this).find('a.forumPostEditorCancel'));//.attr('href',"#");
+				console.log($(this).text().trim() + " " + chrome.i18n.getMessage(tld + "_reply"))
 				if($(this).text().trim() == chrome.i18n.getMessage(tld + "_reply")) {
 					$.fn.forum.writeSite(_this);
 				}
