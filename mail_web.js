@@ -1,5 +1,5 @@
 var textZeile = $("#formRegister").find(".group")[2];
-$(textZeile).before("<div class=\"group bottommargin10\"><div class=\"col3\"><label><strong>e" + chrome.i18n.getMessage("defaultText") + "</strong></label></div><div class=\"col9 last\"><div class=\"siteload\" style=\"display: inline-block;\"><ul class=\"myMenu\"></ul><div style=\"clear:both;\"></div></div></div>");
+$(textZeile).before("<div class=\"group bottommargin10\"><div class=\"col3\"><label><strong>" + chrome.i18n.getMessage("defaultText") + "</strong></label></div><div class=\"col9 last\"><div class=\"siteload\" style=\"display: inline-block;\"><ul class=\"myMenu\"></ul><div style=\"clear:both;\"></div></div></div>");
 
 myThis.chrome.storage.local.get("text", function(items) {
 	$.each(items["text"], function(index, value) {
