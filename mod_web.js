@@ -226,6 +226,8 @@ function Android () {
 		var mThis = this;
 		console.log(mThis);
 		var reply = tld + "_reply";
+		console.log(replyurl);
+		console.log($(this).text().trim() + " " + chrome.i18n.getMessage(reply))
 		if($(this).text().trim() == chrome.i18n.getMessage(reply)) {
 			$().ready(function() {
 				setTimeout(writeSite, 1500);
