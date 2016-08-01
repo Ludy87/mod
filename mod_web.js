@@ -225,7 +225,10 @@ function Android () {
 	$( "body" ).delegate( "ul.threadPostOptionsButtons a", "click", function() {
 		var mThis = this;
 		console.log(mThis);
-		console.log("-->" +chrome.i18n.getMessage(tld + "_reply"))
+		console.log("-->" + chrome.i18n.getMessage(tld + "_reply"))
+		console.log("-->" + chrome.i18n.getMessage("de_reply"))
+		console.log("-->" + replyurl)
+		//de_reply
 		if($(this).text().trim() == chrome.i18n.getMessage(tld + "_reply")) {
 			$().ready(function() {
 				setTimeout(writeSite, 1500);
