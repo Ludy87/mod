@@ -237,7 +237,7 @@ if (mail == undefined && hostPathLength == 4 && area !== "leaderboard") {
 	    	$(form).find('label').css('display',"none");
 	    	$(form).find('input#searchIpAddress').attr('size',"");
 	    	$(form).find('input#searchIpAddress').attr('placeholder',"IP-Adresse");
-	        $(".forumThreadAdLeaderboardTop").after('<div><form action="/de/android/admin/userSearch" method="post">'+$(form).html()+'</form></div>');
+	        $(".forumThreadAdLeaderboardTop").after('<div><form action="' + userSearch + '" method="post">'+$(form).html()+'</form></div>');
 	    	$('.forumSidebox.searchip').remove();
 		//$(".forumSidebar").prepend('<section class="forumSidebox"><ul><li class="forumSideboxItem "><form action="/de/android/admin/userSearch" method="post">'+$(form).html()+'</form></li></ul></section>');
 	    },
@@ -304,7 +304,7 @@ if (mail == undefined && hostPathLength == 4 && area !== "leaderboard") {
 		$("body").load(adminSite + areaUserId)
 	}
 }
-$(".powerbarLinks").append('<a href="/de/android/admin/userSearch">Usersuche</a>');
+$(".powerbarLinks").append('<a href="' + userSearch + '">Usersuche</a>');
 $(".navTopLeft").append('<a href="/de/android/admin/userSearch" class="navTopLeftLink"><span>Usersuche</span></a>');
 if(area === "forum") {
 	$.ajax({
