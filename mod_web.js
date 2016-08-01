@@ -141,7 +141,7 @@ function Android () {
 					$(this).find(".threadPostAuthorName .user-badges span").first().append(" DER KOPF");
 				}
 				if(userId == "4361215" || userId == "2927890") {
-					$(this).find(".threadPostAuthorName .user-badges span").first().append(" DEV");
+					$(this).find(".threadPostAuthorName .user-badges span").first().append("<span> DEV</span>");
 				}
 				if(userId == "474375") {
 					$(this).find(".threadPostAuthorName .user-badges span").first().append(" DIRTY UNICORNS");
