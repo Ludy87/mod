@@ -2,7 +2,7 @@ var userS = userSearch;
 var mailT = mailToUrl;
 function Android () {
 	
-	this.addusersearch = function() {
+	this.usersearchlayout = function() {
 		$("input[type=submit]").each(function(i,v) {
 			$(v).addClass("btn-primary-small padding-y-small");
 		});	
@@ -27,9 +27,9 @@ function Android () {
 				$(formuser).find('label').css('display',"none");
 				$(formuser).find('input#searchName').attr('size',"");
 				$(formuser).find('input#searchName').css('width',"100%");
-				$(formuser).find('input#searchName').attr('placeholder',"Username");
-				$("body").append('<gcse:searchresults></gcse:searchresults>');
+				$(formuser).find('input#searchName').attr('placeholder', chrome.i18n.getMessage(tld + "_username"));
 				if (tld == "de") {
+					$("body").append('<gcse:searchresults></gcse:searchresults>');
 					$(".forumSidebar").prepend('<section class="forumSidebox searchip"><h2>Mod Panel</h2><ul><li class="forumSideboxItem"><form action="' + userSearch + '" method="post">'+$(formip).html()+'</form></li><li class="forumSideboxItem"><form action="' + userSearch + '" method="post">'+$(formuser).html()+'</form></li><li class="forumSideboxItem"><gcse:searchbox></gcse:searchbox></li></ul></section>');
 					var script = document.createElement('script');
 					script.text = '(function() {var cx = "006006678927633944778:-li7chryqxa";var gcse = document.createElement("script");gcse.type = "text/javascript";gcse.async = true;gcse.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//cse.google.com/cse.js?cx=" + cx;var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(gcse, s);})();';
@@ -43,7 +43,7 @@ function Android () {
 	};
 	
 	this.usersearch = function() {
-		$(".powerbarLinks").append('<a href="' + userSearch + '">Manage user</a>');
+		$(".powerbarLinks").append('<a href="' + userSearch + '">' + chrome.i18n.getMessage(tld + "_manageuser") + '</a>');
 		$(".navTopLeft").append('<a href="' + userSearch + '" class="navTopLeftLink"><span>Manage user</span></a>');
 	};
 	
