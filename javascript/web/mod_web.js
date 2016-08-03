@@ -31,12 +31,12 @@ function Android () {
 				$("body").append('<gcse:searchresults></gcse:searchresults>');
 				if (tld == "de") {
 					$(".forumSidebar").prepend('<section class="forumSidebox searchip"><h2>Mod Panel</h2><ul><li class="forumSideboxItem"><form action="' + userSearch + '" method="post">'+$(formip).html()+'</form></li><li class="forumSideboxItem"><form action="' + userSearch + '" method="post">'+$(formuser).html()+'</form></li><li class="forumSideboxItem"><gcse:searchbox></gcse:searchbox></li></ul></section>');
+					var script = document.createElement('script');
+					script.text = '(function() {var cx = "006006678927633944778:-li7chryqxa";var gcse = document.createElement("script");gcse.type = "text/javascript";gcse.async = true;gcse.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//cse.google.com/cse.js?cx=" + cx;var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(gcse, s);})();';
+					document.getElementsByTagName('head')[0].appendChild(script);
 				} else {
 					$(".forumSidebar").prepend('<section class="forumSidebox searchip"><h2>Mod Panel</h2><ul><li class="forumSideboxItem"><form action="' + userSearch + '" method="post">'+$(formip).html()+'</form></li><li class="forumSideboxItem"><form action="' + userSearch + '" method="post">'+$(formuser).html()+'</form></li></ul></section>');
 				}
-				var script = document.createElement('script');
-				script.text = '(function() {var cx = "006006678927633944778:-li7chryqxa";var gcse = document.createElement("script");gcse.type = "text/javascript";gcse.async = true;gcse.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//cse.google.com/cse.js?cx=" + cx;var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(gcse, s);})();';
-				document.getElementsByTagName('head')[0].appendChild(script);
 			},
 			error: function (jqXHR, textStatus, errorThrown) {}
 		});
@@ -113,7 +113,8 @@ function Android () {
         this.powerBar();
 		this.usersearch();
         $.ajax({
-			url: 'chrome-extension://' + chrome.i18n.getMessage('@@extension_id') + '/javascript/web/mod_modi_web.js',
+			//url: 'chrome-extension://' + chrome.i18n.getMessage('@@extension_id') + '/javascript/web/mod_modi_web.js',
+			url: 'https://raw.githubusercontent.com/Ludy87/mod/master/javascript/web/mod.js',
 			type: "GET",
 			contentType: 'text/javascript',
 			cache: false,
