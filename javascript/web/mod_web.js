@@ -44,7 +44,7 @@ function Android () {
 	
 	this.usersearch = function() {
 		$(".powerbarLinks").append('<a href="' + userSearch + '">' + chrome.i18n.getMessage(tld + "_manageuser") + '</a>');
-		$(".navTopLeft").append('<a href="' + userSearch + '" class="navTopLeftLink"><span>Manage user</span></a>');
+		$(".navTopLeft").append('<a href="' + userSearch + '" class="navTopLeftLink"><span>' + chrome.i18n.getMessage(tld + "_manageuser") + '</span></a>');
 	};
 	
 	this.signaturFix = function() {
