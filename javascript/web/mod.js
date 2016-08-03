@@ -12,7 +12,7 @@ if (mail == undefined && hostPathLength == 5 && area == "forum" && ((areaUserId 
 
 if (mail == "userSearch") {
 	// Button Layout fix UserSearch
-	new Android().addusersearch();
+	new Android().usersearchlayout();
 	
 }
 
