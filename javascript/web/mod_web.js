@@ -231,7 +231,7 @@ function Android () {
 						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + adminSite + userId + '">' + chrome.i18n.getMessage(tld + "_adminSite_text") + '</a>');
 					}
 					if(items.pnChangerVisable) {
-						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + pnChange + userId + '">PM-Limit-Changer</a>');
+						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + pnChange + userId + '">' + chrome.i18n.getMessage(tld + "_pm_limit_changer") + '</a>');
 					}
 					if(items.mailToVisable) {
 						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + mailTo + userId + '">' + chrome.i18n.getMessage(tld + "_send_mail") + '</a>');
@@ -297,7 +297,7 @@ function Android () {
 }
 
 function writeSite() {
-	$("div.forumEditor").prepend("<a href=\"#\" style=\"margin: 1px; padding: 2px !important;\" class=\"defaultButton btn-primary-small padding-y-small\">StandardTexte</a><div class=\"siteload\" style=\"display: none;\"><ul class=\"myMenu\"></ul><div style=\"clear:both;\"></div></div>");
+	$("div.forumEditor").prepend("<a href=\"#\" style=\"margin: 1px; padding: 2px !important;\" class=\"defaultButton btn-primary-small padding-y-small\">" + chrome.i18n.getMessage(tld + "_default_text") + "</a><div class=\"siteload\" style=\"display: none;\"><ul class=\"myMenu\"></ul><div style=\"clear:both;\"></div></div>");
 	chrome.storage.local.get("text", function(items) {
 		var allKeys = Object.keys(items);
 	
