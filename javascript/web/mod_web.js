@@ -228,7 +228,7 @@ function Android () {
 						$(thisC).after('<button class="btn-primary-small padding-y-small info' + postid + '" style="background-color:#fe0000; margin-left: 1px;" data-ip="'+postid+'">IP\'s</button>');
 					}
 					if(items.adminSiteVisable) {
-						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + adminSite + userId + '">Adminsite</a>');
+						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + adminSite + userId + '">' + chrome.i18n.getMessage(tld + "_adminSite_text") + '</a>');
 					}
 					if(items.pnChangerVisable) {
 						$(thisC).after('<a class="btn-primary-small padding-y-small" style="margin-left: 1px;" href="' + pnChange + userId + '">PM-Limit-Changer</a>');
