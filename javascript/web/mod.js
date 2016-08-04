@@ -5,9 +5,8 @@ console.log(mail)
 console.log(areaUserId)
 console.log(admin)
 console.log(chrome.i18n.getMessage(tld + "_forum"))
-console.log(mail == undefined && hostPathLength == 5 && ((area == "foro") || (area == "forum")) && ((areaUserId == undefined) || (areaUserId = chrome.i18n.getMessage(tld + "_forum"))))
 
-if (mail == undefined && hostPathLength == 5 && ((area == "foro") || (area == "forum")) && ((areaUserId == undefined) || (areaUserId = chrome.i18n.getMessage(tld + "_forum")))) {
+if (mail == undefined && hostPathLength == 5 && ((area == "foro") || (area == "forum")) && ((areaUserId == undefined) || (areaUserId == chrome.i18n.getMessage(tld + "_forum")))) {
 	new Android().modPanel();
 	console.log("überblick Forum")
 }
