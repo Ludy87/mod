@@ -22,13 +22,14 @@ if (mail == undefined && hostPathLength == 4 && area.length > 0) {
 	$('.filter').remove();
 	$('.articleComments .existingComments').removeHighlight();
 	chrome.storage.local.get("wordFilter", function(result) {
-		console.log(result)
-		$.each(result['wordFilter'], function(i, v) {
-			if(v) {
-				var high = ($('.articleComments .existingComments').highlight( v ));
-				$(".filter").show();
-			}
-		});
+		if (result.length > 0 ){
+			$.each(result['wordFilter'], function(i, v) {
+				if(v) {
+					var high = ($('.articleComments .existingComments').highlight( v ));
+					$(".filter").show();
+				}
+			});
+		}
 	});
 	var i = 0;
 	$(".commentContainer header a:not(.commentLink)").each(function(index, value) {
