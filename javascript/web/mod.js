@@ -4,6 +4,7 @@ console.log(area)
 console.log(mail)
 console.log(areaUserId)
 console.log(admin)
+console.log(chrome.i18n.getMessage(tld + "_forum"))
 
 if (mail == undefined && hostPathLength == 5 && area == "forum" && ((areaUserId == undefined) || (areaUserId = chrome.i18n.getMessage(tld + "_forum")))) {
 	new Android().modPanel();
