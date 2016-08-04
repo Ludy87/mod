@@ -1,5 +1,5 @@
 var userS = userSearch;
-var mailT = mailToUrl;
+//var mailT = mailToUrl;
 function Android () {
 	
 	this.usersearchlayout = function() {
