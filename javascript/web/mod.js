@@ -22,6 +22,7 @@ if (mail == undefined && hostPathLength == 4 && area.length > 0) {
 	$('.filter').remove();
 	$('.articleComments .existingComments').removeHighlight();
 	chrome.storage.local.get("wordFilter", function(result) {
+		console.log(result)
 		$.each(result['wordFilter'], function(i, v) {
 			if(v) {
 				var high = ($('.articleComments .existingComments').highlight( v ));
