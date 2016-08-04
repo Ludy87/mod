@@ -109,7 +109,7 @@ if (mail == undefined && hostPathLength == 4 && area.length > 0) {
 	});
 	
 	$( "body" ).delegate( "button.replyForm", "click", function() {
-		if($(this).text().trim() == chrome.i18n.getMessage(tld + "_reply")) {
+		if($(this).text().trim() == chrome.i18n.getMessage(tld + "_reply_m")) {
 			var commentId = $(this).data("reply");
 			$("li#comment" + commentId.commentId + " .replyFormDiv").append("<div class=\"siteload\"><ul class=\"myMenu\"></ul><div style=\"clear:both;\"></div></div>");
 			myThis.chrome.storage.local.get("text", function(items) {
