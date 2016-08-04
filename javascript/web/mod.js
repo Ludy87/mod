@@ -140,6 +140,12 @@ if (mail == undefined && hostPathLength == 4 && area.length > 0) {
 		$("div.siteload").remove();
 		return true;
 	});
+	$( "body" ).delegate("ul#wcomment","click",function() {
+		console.log($(this).data("id"));
+		$('html, body').animate({
+			scrollTop: $("#" + $(this).data("id")).offset().top - 130
+		}, 2000);
+	});
 	function writeText(text, position){
 		var textarea = $(".newComment textarea#commentTextarea" + position);
 		$(textarea).val(text);
