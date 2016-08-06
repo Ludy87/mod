@@ -1,4 +1,7 @@
 T_language = {
 	de: {},
-	br: {}
+	br: {},
+	com: {
+		username: "User-Name!"W
+	}
 }
