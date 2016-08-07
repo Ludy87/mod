@@ -1,5 +1,7 @@
 T_language = {
-	de: {},
+	de: {
+		manageuser: "Benutzer verwalten"
+	},
 	br: {},
 	com: {}
 }
