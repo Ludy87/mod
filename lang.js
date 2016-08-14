@@ -1,6 +1,6 @@
 T_language = {
 	de: {
-		no: "nein"
+		no: "ne"
 	},
 	br: {},
 	com: {},
