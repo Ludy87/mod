@@ -1,7 +1,5 @@
 T_language = {
-	de: {
-		no: "ne"
-	},
+	de: {},
 	br: {},
 	com: {},
 	default: {
